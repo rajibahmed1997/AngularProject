@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SmtpConfigComponent } from './programs/interfacing/smtp-config/smtp-config.component';
 
 const routes: Routes = [
   {
