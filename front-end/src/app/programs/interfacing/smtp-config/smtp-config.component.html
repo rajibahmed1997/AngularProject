@@ -1,44 +1,51 @@
-<c-smart-table
-  [activePage]="1"
-  [columnSorter]="true"
-  [columns]="smtpColumns"
-  [itemsPerPageSelect]="true"
-  [itemsPerPage]="5"
-  [items]="usersData"
-  [sorterValue]="{ column: 'name', state: 'asc' }"
-  [tableFilter]="true"
-  [tableProps]="{ hover: true, striped: true, responsive: true }"
-  [tableBodyProps]="{ align: 'middle' }"
-  clickableRows
-  header
-  pagination
->
+<c-card>
+  <c-card-header>
+    <c-row class="row-margin" >
+      <h2>{{pageTitle}}</h2>
+    </c-row>
+  </c-card-header>
+  <c-card-body>
+    <c-row>
+      <c-col md="12" [offset]="{md: 10}" >
+        <a routerLink="/interfacing/add"><button class="btn btn-success pull-right" > Add New</button></a>
 
-  <ng-template
-    cTemplateId="tableData"
-    let-columnName="columnName"
-    let-item="item"
-    let-tdContent="tdContent"
-  >
-    <td>
-      <ng-container [ngSwitch]="columnName">
-        
-        <ng-container *ngSwitchCase="'show'" class="py-2">
-          <button
-            cButton
-            color="danger"
-            size="sm"
-            variant="outline"
-          >
-            Delete
-          </button>
-        </ng-container>
+      </c-col>
+    </c-row>
+    <c-smart-table
+      [activePage]="1"
+      [columnSorter]="true"
+      [columns]="smtpColumns"
+      [itemsPerPageSelect]="true"
+      [itemsPerPage]="5"
+      [items]="usersData"
+      [sorterValue]="{ column: 'name', state: 'asc' }"
+      [tableFilter]="true"
+      [tableProps]="{ hover: true, striped: true, responsive: true }"
+      [tableBodyProps]="{ align: 'middle' }"
+      clickableRows
+      header
+      pagination
+    >
+      <ng-template
+        cTemplateId="tableData"
+        let-columnName="columnName"
+        let-item="item"
+        let-tdContent="tdContent"
+      >
+        <td>
+          <ng-container [ngSwitch]="columnName">
+            <ng-container *ngSwitchCase="'show'" class="py-2">
+              <button cButton color="danger" size="sm" variant="outline">
+                Delete
+              </button>
+            </ng-container>
 
-        <ng-container *ngSwitchDefault>
-          {{ tdContent }}
-
-        </ng-container>
-      </ng-container>
-    </td>
-  </ng-template>
-</c-smart-table>
+            <ng-container *ngSwitchDefault>
+              {{ tdContent }}
+            </ng-container>
+          </ng-container>
+        </td>
+      </ng-template>
+    </c-smart-table>
+  </c-card-body>
+</c-card>

@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./smtp-add-edit.component.scss']
 })
 export class SmtpAddEditComponent implements OnInit {
+  pageTitle: string = "SMTP Add New"
 
   constructor() { }
 

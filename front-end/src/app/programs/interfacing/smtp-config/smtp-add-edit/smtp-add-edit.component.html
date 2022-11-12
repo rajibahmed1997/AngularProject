@@ -1,1 +1,90 @@
-<p>SMTP add works!</p>
+<c-card>
+    <div class="card-header">
+        <label>
+            <h4>{{pageTitle}}</h4>
+        </label>
+    </div>
+    <br>
+    <c-container>
+        <form novalidate>
+            <div class="row">
+                <input type="hidden" formControlName="id" />
+                <div class="col-md-6">
+                    <label for="host">Host</label>
+                    <div>
+                        <input type="text" class="form-control" formControlName="host" id="host" placeholder="host">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="portNumber">Port Number</label>
+                    <div>
+                        <input type="text" class="form-control" formControlName="portNumber" id="portNumber" placeholder="portNumber">
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label cLabel for="userEmail">Email address</label>
+                    <input cFormControl id="userEmail" type="email">
+                    <div cFormText>
+                        We'll never share your email with anyone else
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label cLabel for="userPassword">Password</label>
+                    <input cFormControl id="userPassword" type="password">
+                </div>
+            </div>
+            <br>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="effectiveFrom">Effective From</label>
+                    <div>
+                        <input type="date" class="form-control" formControlName="effectiveFrom" id="effectiveFrom"
+                            placeholder="Effective From">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="effectiveTo">Effective To</label>
+                    <div>
+                        <input type="date" class="form-control" formControlName="effectiveTo" id="effectiveTo"
+                            placeholder="Effective To">
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="ssl" class="dropdownLabel">TLS/SSL</label>
+                    <select aria-label="label select example" cSelect id="ssl"
+                        formControlName="ssl" name="ssl">
+                        <option value=null selected>Select</option>
+                        <option value="3fa85f64-5717-4562-b3fc-2c963f66afa6"> Habib</option>
+                        <option >
+                            ssl.name
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <br>
+
+            <div class="row" style="margin-left: 20px;">
+                <div class="col-md-4">
+                    <button type="submit" class="btn btn-success" style="margin: 10px 10px 10px 10px; padding: 5px 10px 5px 10px">Submit</button>
+                    <button type="submit" class="btn btn-warning" style="margin: 10px 10px 10px 10px; padding: 5px 12px 5px 12px">Reset</button>
+
+                </div>
+            </div>
+            <br>
+
+        </form>
+    </c-container>
+
+
+
+</c-card>
+
