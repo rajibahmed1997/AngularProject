@@ -28,6 +28,7 @@ import { IconModule } from '@coreui/icons-angular';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { InterfacingModule } from './programs/interfacing/interfacing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -65,7 +66,9 @@ import { InterfacingModule } from './programs/interfacing/interfacing.module';
     NavbarModule,
     DatePickerModule,
     LoadingButtonModule,
-    MultiSelectModule
+    MultiSelectModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
